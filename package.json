@@ -15,8 +15,10 @@
   "dependencies": {
     "cross-env": "^7.0.3",
     "electron-is-dev": "^2.0.0",
+    "leaflet": "^1.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.4.2",
     "react-scripts": "^5.0.1",
     "typescript": "^4.8.4"
@@ -46,12 +48,15 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/leaflet": "^1.9.15",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.8",
     "@types/react-router-dom": "^5.3.3",
     "concurrently": "^7.5.0",
-    "electron": "^20.2.0",
-    "electron-builder": "^23.6.0",
-    "wait-on": "^6.0.1"
+    "electron": "^38.1.2",
+    "electron-builder": "^26.0.12",
+    "wait-on": "^9.0.1",
+    "web-vitals": "^5.1.0"
   }
 }

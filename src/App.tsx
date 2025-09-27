@@ -1,28 +1,23 @@
 import React from 'react';
 import { Link } from "react-router-dom"
-import logo from './logo.svg';
 import './App.css';
+import 'leaflet/dist/leaflet.css'
+import SimpleMap from './pages/SimpleMap';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>React Electron Boilerplate</p>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Link className="App-link" to="/about">Link to the About Page</Link>
+      <header className="app-header">
+        <nav className="navigation">
+          <Link className="nav-button" to="/">Màn hình chính</Link>
+          <Link className="nav-button" to="/about">Thiết lập nhiệm vụ</Link>
+          <Link className="nav-button" to="/management">Quản lý thông tin</Link>
+        </nav>
       </header>
-      
+      <main className="main-content">
+        <SimpleMap />
+      </main>
     </div>
   );
 }
