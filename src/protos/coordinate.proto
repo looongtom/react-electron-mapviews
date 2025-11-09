@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.management.coordinate";
+option java_outer_classname = "CoordinateProto";
+option objc_class_prefix = "RTG";
+
+package coordinate;
+
+service CoordinateService {
+    rpc GetCoordinate(CoordinateRequest) returns (CoordinateResponse) {}
+    rpc GetCoordinateList(CoordinateListRequest) returns (CoordinateListResponse) {}
+}
+
+message Coordinate {
+    double latitude = 1;
+    double longitude = 2;
+}
+
+message CoordinateRequest {
+    Coordinate coordinate = 1;
+}
+
+message CoordinateResponse {
+    Coordinate coordinate = 1;
+    string message = 2;
+    int64 timestamp = 3;
+}
+
+message CoordinateList {
+    repeated Coordinate coordinates = 1;
+}
+
+message CoordinateListRequest {
+    CoordinateList coordinates = 1;
+}
+
+message CoordinateListResponse {
+    CoordinateList coordinates = 1;
+    string message = 2;
+    int64 timestamp = 3;
+}
